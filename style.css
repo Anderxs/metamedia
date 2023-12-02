@@ -1,0 +1,66 @@
+*{
+  margin: 0;
+  padding: 0;
+
+}
+
+.menu {
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  width: 100%;
+}
+.logo {
+  float: left;
+  padding-left: 90px;
+  position: absolute;
+  margin-top: 2px;
+
+}
+.ilustro {
+  float: left;
+  position: relative;
+  top: 90px;
+  left: 200px;
+}
+.botao {
+  float: right;
+  position: relative;
+  top: 400px;
+  right: 400px;
+  width: 300px;
+  height: 50px;
+  border: solid 1px #0e1525;
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  background-color: #0e1525;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+
+}
+.botao:hover{
+  background-color: blue;
+  color: white;
+  transform: scale(1.2)
+}
+
+@media screen and (max-width: 480px) {
+  .ilustro {
+    position: relative;
+    left: 60px;
+    max-height: 10px;
+    width: ;
+
+  }
+  .logo {
+    position: relative;
+    right: 25px;
+  }
+  .botao {
+    position: relative;
+    top: 600px;
+    right: 55px;
+  }
+  
+  
+
+ 
+}
