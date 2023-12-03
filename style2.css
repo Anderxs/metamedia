@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,300&amp;display=swap');
+  *{
+    margin: 0;
+    padding: 0;
+   }
+   body{
+   background-color: #131313;
+   font-family: 'Noto Sans', sans-serif;
+   }
+   input::-webkit-inner-spin-button,
+   input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+   }
+   .menu {
+    width: 100%;
+    height: 50px;
+   }
+   .logo {
+    
+   }
+  
+   input::placeholder{
+    color: rgb(34, 34, 34);
+    font-size: 16px;
+   }
+   .entrada input{
+    display: block;
+    position: relative;
+    margin: 1px;
+    padding: 4px;
+    width: 200px;
+    left: 25%;
+    font-size: 20px;
+    border-radius:15px;
+    height:50px;
+    border:none;
+    color: black;
+   }
+   .entrada input:hover{
+    background-color: #abaaaa;
+   }
+.entrada_2 input:hover{
+    background-color: #abaaaa;
+   }
+   .entrada{
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    height: 480px;
+    width: 360px;
+    border-radius: 10px;
+    margin: 20px;
+   }
+   .entrada_2{
+    position: absolute;
+    left: 20%;
+    top: 10%;
+    height: 480px;
+    width: 360px;
+    border-radius: 10px;
+    margin: 20px;
+   }
+   .entrada_2 input{
+    display: block;
+    position: relative;
+    margin: 1px;
+    padding: 4px;
+    width: 200px;
+    left: 25%;
+    font-size: 20px;
+    border-radius:15px;
+    height:50px;
+    border:none;
+    color: black;
+   }
+   label{
+    position: relative;
+    left: 100px;
+    font-size: 16px;
+    color: aliceblue;
+   }
+   button{
+    position: relative;
+    margin: 20px;
+    width: 320px;
+    height: 90px;
+    left: 25px;
+    top: -120px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 15px;
+    font-size:19px;
+    border:none;
+    background-color: rgb(127, 127, 178);
+    transition: background .4s;
+    box-shadow: 2px 2px 20px 2px rgb(66, 66, 100);
+   }
+   button:hover {
+       background: rgb(77, 77, 166);
+       box-shadow: 2px 2px 20px 2px rgb(77, 77, 166);
+   }
+
+   .situacao{
+    position:relative;
+    left:50%;
+    top:13px;
+    background-color:#202020;
+    width:380px;
+    height:100px;
+    border-radius:20px;
+   }
+   .situacao p{
+    padding:10px;
+    position:absolute;
+    font-size:30px;
+    left:27%;
+    top:35px;
+   }
+   .situacao h1{
+    position: absolute;
+    left: 33%;
+    font-size: 25px;
+   }
+   #reprv{
+     display:none;
+     color:red;
+   }
+   #aprov{
+     display:none;
+     color:green;
+   }
+   
+   .container{
+    position: relative;
+    left: 50%;
+    top: 35px;
+    background-color:#202020;
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+   }
+   .container h1{
+    position: relative;
+    padding: 5px;
+    left: 5px;
+    display: flex;
+    flex-direction: row;
+   }
+   .container p{
+    position: relative;
+    
+    left: 60px;
+    font-size: 40px;
+    color: aliceblue;
+   }
+   
+   .container_2{
+    position: relative;
+    left: 66%;
+    top: -66px;
+    background-color:#202020;
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+   }
+   
+   .container_2 p{
+    position: relative;
+    top: 40px;
+    left: 50px;
+    font-size: 40px;
+    color: aliceblue;
+   }
+   .container_2 h1{
+    position: absolute;
+    padding: 5px;
+    left: 5px; 
+   }
+   .boneco {
+    position: relative;
+    top: 90px;
+    left: 30px;
+   }
+   .boneco h1 {
+    color: bisque;
+   }
+   @media only screen and (min-width : 200px) {
+    
+    .container {
+      position: relative;
+      top: -90px;
+      left: 10px;
+    }
+    .container_2 {
+      position: relative;
+      top: -190px;
+      left: 165px;
+      width: 240px;
+    }
+    .situacao {
+      position: relative;
+      top: -100px;
+      left: 8px;
+      width: 399px;
+    }
+    .entrada {
+      position: relative;
+      top: 100px;
+      left: -90px;
+      margin-bottom: 1px;
+      height: 200px;
+      width: 270px;
+    }
+    .entrada_2 {
+      position: relative;
+      margin-bottom: 1px;
+      height: 200px;
+      width: 270px;
+      top: -120px;
+      left: 120px;
+    }
+    .button {
+      position: fixed;
+      left: 40px;
+      top: 50px;
+      margin: 20px;
+    }
+     }
