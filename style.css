@@ -11,7 +11,7 @@
 }
 .logo {
   float: left;
-  padding-left: 90px;
+  padding-left: 60px;
   position: absolute;
   margin-top: 2px;
 
@@ -20,13 +20,13 @@
   float: left;
   position: relative;
   top: 90px;
-  left: 200px;
+  left: 60px;
 }
 .botao {
   float: right;
   position: relative;
-  top: 400px;
-  right: 400px;
+  top: 100px;
+  right: 180px;
   width: 300px;
   height: 50px;
   border: solid 1px #0e1525;
@@ -47,7 +47,7 @@
     position: relative;
     left: 60px;
     max-height: 10px;
-    width: ;
+    
 
   }
   .logo {
@@ -63,4 +63,53 @@
   
 
  
+}
+@media screen and (min-width: 200px) {
+  .ilustro {
+    position: relative;
+    left: 40px;
+    top: 30px;
+    
+    
+  }
+  .logo {
+    position: fixed;
+    width: 100px;
+    top: 3px;
+    left: -20px;
+  }
+  .botao {
+    position: relative;
+    top: 530px;
+    left: -35px;
+    
+  }
+  
+}
+@media screen and (min-width: 400px) {
+  .ilustro {
+    position: relative;
+    left: 55px;
+    top: 200px;
+
+  }
+  .botao {
+    position: relative;
+    left: -60px;
+    top: 700px;
+  }
+}
+@media screen and (min-width: 430px) {
+  .botao {
+    left: -70px;
+  }
+  .logo {
+    position: relative;
+    left: -5px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .botao {
+    left: -50px;
+  }
 }
