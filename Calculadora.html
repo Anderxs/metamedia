@@ -11,36 +11,19 @@
     <title>Document</title>
 </head>
 <body>
-	<header class="menu">
-		<div class="logo">
-			<img src="./metamédia.png" width="230px">
-
+	
+ <main class="big">
+	<div class="entrada">
+		<input min="0" max="10" type="number" oninput="removerSinalMenos('n1')" required placeholder="1°Bimestre" id="n1">
+		<br>
+		<input min="0" max="10" type="number" oninput="removerSinalMenos('n2')" required placeholder="3°Bimestre" id="n2">
 		</div>
-	</header>
-	<div class="boneco">
-		<img src="./jose.png" width="80px">
-		<h1>Preencha de acordo com suas notas</h1>
-	</div>
-
-  
-
- <div class="entrada">
-    <label for="1 bimestre">1º bimestre</label>
-    <input min="0" max="10" type="number" oninput="removerSinalMenos('n1')" required placeholder="Insira sua nota" id="n1">
-    <br>
-    <label for="1 bimestre">3º bimestre</label>
-    <input min="0" max="10" type="number" oninput="removerSinalMenos('n2')" required placeholder="Insira sua nota" id="n2">
-    <br>
-    </div>
-    <div class="entrada_2">
-    <label for="1 bimestre">2º bimestre</label>
-    <input min="0" max="10" type="number" oninput="removerSinalMenos('n3')" required placeholder="Insira sua nota" id="n3">
-    <br>
-    <label for="1 bimestre">4º bimestre</label>
-    <br>
-    <input min="0" max="10" type="number" oninput="removerSinalMenos('n4')" required placeholder="Insira sua nota" id="n4">
-    
- </div>
+		<div class="entrada_2">
+		<input min="0" max="10" type="number" oninput="removerSinalMenos('n3')" required placeholder="2°Bimestre" id="n3">
+		<br>
+		<input min="0" max="10" type="number" oninput="removerSinalMenos('n4')" required placeholder="4°Bimestre" id="n4">
+	 </div>
+ </main>
  <div>
    <button onclick="calc()">Calcular</button>
  </div>
@@ -50,7 +33,6 @@
    <p id='reprv'>REPROVADO</p>
    <p id='aprov'>APROVADO</p>
  </div>
- 
    <div class="container">
       <h1>NOTA FINAL</h1>
       <p id="container_3"></p>
