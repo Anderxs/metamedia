@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediaMaster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>MédiaMaster</h1>
+        <img src="banner.jpg" alt="banner" style="max-width: 70%; height: auto; display: block; margin: 0 auto;"> <br>
+        <span><a href="https://br.freepik.com/vetores-gratis/ilustracao-do-conceito-de-calculadora_6982904.htm#query=calculo&position=0&from_view=search&track=sph&uuid=6fec208a-8ec9-4e38-ab60-f1edfcab0185">Imagem de storyset</a> no Freepik</span>
+        <h1 >Bem Vindo</h1>
+    </header>
+    <main>
+        <section>
+            <div class="bimestres">
+                <div class="notas">
+                    <div class="circulo">
+                        <p class="number">1</p>
+                    </div>
+                    <input type="number" id="input1" required>
+                </div>
+                <div class="notas">
+                    <div class="circulo">
+                        <p class="number">2</p>
+                    </div>
+                    <input type="number" id="input2" required>
+                </div>
+                <div class="notas">
+                    <div class="circulo">
+                        <p class="number">3</p>
+                    </div>
+                    <input type="number" id="input3" required>
+                </div>
+                <div class="notas">
+                    <div class="circulo">
+                        <p class="number">4</p>
+                    </div>
+                    <input type="number" id="input4" required>
+                </div>
+            </div>
+            <button onclick="calcularMedia()"><strong>Diagnóstico</strong></button>
+        </section>
+    </main>
+    <footer>
+        <p>Deus é bom e o Diabo não presta</p>
+    </footer>
+    <script>
+        function calcularMedia() {
+          var nota1 = parseFloat(document.getElementById("input1").value);
+          var nota2 = parseFloat(document.getElementById("input2").value);
+          var nota3 = parseFloat(document.getElementById("input3").value);
+          var nota4 = parseFloat(document.getElementById("input4").value);
+
+          if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3) || isNaN(nota4)) {
+             alert("Por favor, insira valores numéricos para todas as notas.");
+             return;
+            }
+    
+          var media = (nota1 + nota2 + nota3 + nota4) / 4;
+    
+          window.location.href = "diagnostico.html?media=" + encodeURIComponent(media.toFixed(2));
+        }
+      </script>
+</body>
+</html>

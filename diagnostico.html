@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnóstico</title>
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <h1 id="apRp"></h1>
+  <img id="imagemResultado" style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
+
+  <script>
+    var urlParams = new URLSearchParams(window.location.search);
+    var media = urlParams.get('media');
+
+    document.body.innerHTML += "<p>A média é: " + media + "</p>";
+    
+    var imagemResultado = document.getElementById("imagemResultado");
+
+      if (media >= 6) {
+        imagemResultado.src = "aproved.jpg";
+        document.getElementById('apRp').innerText = "APROVADO"
+      } else {
+        imagemResultado.src = "reproved.jpg"; 
+        document.getElementById('apRp').innerText = "RECUPERAÇÂO"
+      }
+
+  </script>
+</body>
+</html>
