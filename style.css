@@ -1,3 +1,8 @@
+@media screen and (max-width: 600px) {
+    .alert-box {
+        width: 80%; 
+    }
+}
 @keyframes fadeIn {
     from {
       opacity: 0;
@@ -6,7 +11,11 @@
       opacity: 1;
     }
   }
-
+  input::-webkit-inner-spin-button,
+  input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+  }
 /* Color Theme Swatches in Hex */
 .color-theme_3371524-1-hex { color: #315259; }
 .color-theme_3371524-2-hex { color: #04D9B2; }
@@ -17,6 +26,7 @@
 body, html {
     height: 100%;
     margin: 0;
+    background-color: white;
 }
 
 body {
@@ -63,7 +73,17 @@ section {
     justify-items: center;
 }
 
-
+.alert-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(209, 209, 209, 0.95);
+    color: rgb(0, 0, 0);
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+}
 input {
     padding: 10px;
     width: 65%;
@@ -71,6 +91,7 @@ input {
     border-radius: 20px;
     text-align: center;
     margin-left: 10px;
+    font-size: 18px;
 }
 
 button {
