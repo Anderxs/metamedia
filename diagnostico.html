@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diagnóstico</title>
+  <title>Diagnostico</title>
   <style>
-    body {
+  @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500&family=Josefin+Sans&family=Nanum+Gothic&display=swap');
+  body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  background-color: white;
 }
 
-body {
+  body {
   opacity: 0;
   animation: fadeIn 1.5s ease-in-out forwards; 
 }
@@ -24,27 +26,67 @@ body {
     opacity: 1;
   }
 }
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #d94052;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  bottom: 20px;
+  width: 300px;
+  border:none;
+  box-shadow: 2px 3px 5px #e5625c;
+}
 
+h1 {
+  text-align: center;
+  color:  #315259;
+  font-family: 'Exo 2', sans-serif;
+}
+p{
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Exo 2', sans-serif;
+}
   </style>
 </head>
 <body>
-  <h1 id="apRp"></h1>
+  <!---imagem-->
   <img id="imagemResultado" style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
-
+ <!---titulo + resultado---> 
+  <h1 id="apRp"></h1>
+  <p id="cm"></p>
+  <p id="vf"></p>
+  <!------->
+  <button onclick="voltar()"><strong>VOLTAR</strong></button>
+  
   <script>
     var urlParams = new URLSearchParams(window.location.search);
     var media = urlParams.get('media');
+    var valFal = (6 - media) * 4;
 
-    document.body.innerHTML += "<p>A média é: " + media + "</p>";
+    document.getElementById('cm').innerText = `Sua média é:  ${media}`
     
     var imagemResultado = document.getElementById("imagemResultado");
 
       if (media >= 6) {
         imagemResultado.src = "aproved.jpg";
         document.getElementById('apRp').innerText = "APROVADO"
+        document.getElementById('vf').innerText = `Parabéns você passou!`
       } else {
         imagemResultado.src = "reproved.jpg"; 
-        document.getElementById('apRp').innerText = "RECUPERAÇÂO"
+        if (valFal > 10) {
+          document.getElementById('apRp').innerText = "REPROVADO"
+          document.getElementById('vf').innerText = 'Boa sorte no próximo ano'
+        } else {
+          document.getElementById('apRp').innerText = "RECUPERAÇÃO"
+          document.getElementById('vf').innerText = `Precisa de ${valFal} na prova final`
+        }
+      }
+      function voltar(){
+        window.location.href = "index.html"
       }
 
   </script>
