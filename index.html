@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -16,32 +17,30 @@
     </header>
     <main>
         <section>
+            <form>
             <div class="bimestres">
-                <div class="notas">
-                    <div class="circulo">
-                        <p class="number">1</p>
+                <form>
+
+                    <div class="single-input">
+                        <input type="number" class="input" id="input1" min="0" max="10" required>
+                        <label for="nome"> 1º BIMESTRE </label>
                     </div>
-                    <input type="number" id="input1" placeholder="BIMESTRE" required>
-                </div>
-                <div class="notas">
-                    <div class="circulo">
-                        <p class="number">2</p>
+                    <div class="single-input">
+                        <input type="number" class="input" id="input2" min="0" max="10" required>
+                        <label for="sobrenome">2º BIMESTRE</label>
                     </div>
-                    <input type="number" id="input2" placeholder="BIMESTRE" required>
-                </div>
-                <div class="notas">
-                    <div class="circulo">
-                        <p class="number">3</p>
+                    <div class="single-input">
+                        <input type="number" class="input" id="input3" min="0" max="10" required>
+                        <label for="nome">3º BIMESTRE</label>
                     </div>
-                    <input type="number" id="input3" placeholder="BIMESTRE" required>
-                </div>
-                <div class="notas">
-                    <div class="circulo">
-                        <p class="number">4</p>
+                    <div class="single-input">
+                        <input type="number" class="input" id="input4" min="0" max="10" required>
+                        <label for="sobrenome">4º BIMESTRE</label>
                     </div>
-                    <input type="number" id="input4" placeholder="BIMESTRE" required>
-                </div>
+            
+                </form>
             </div>
+            </form>
             <button onclick="calcularMedia()"><strong>Diagnóstico</strong></button>
         </section>
     </main> 
